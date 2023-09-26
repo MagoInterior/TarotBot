@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tarot Reader</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+
+<body <body background="lua.gif" bgproperties="fixed">> 
+    <section name="intro">
+        <h1 id="mainHeading"><span style="color:#3498db">MAGO TARÔ</span></h1>
+        <ol>
+        <a href="https://pt.bloggif.com/" title="Montagem de fotos"><img src="https://data.bloggif.com/distant/user/store/8/0/f/1/85cce597cde127fe8d1e614ef63c1f08.gif" alt="Montagem criada Bloggif" width="450" height="334" /></a>
+
+            <li>Embaralhe o baralho quantas vezes quiser.</li>
+            <br>
+            <li>Quando estiver pronto, selecione três cartas para revelar.</li>
+            <br>
+            <li>Digite sua consulta e pressione <b>Obtenha minha leitura</b>.</li>
+        </ol>
+    </section>
+    
+    <button id="shuffle">Embaralhar</button>
+    
+    <section id="undrawnCards">
+    <table id="undrawnDeck">
+        <tr>
+            <td id="containsUndrawn">
+                <div id='left' name='left-area' class='deck'></div>
+                <div id="loadingShuffle">
+                    <div class=spinner></div>
+                    <label for="loadingShuffle">Embaralhando as cartas...</label>
+                </div>
+            </td>
+         </tr>
+    </table>
+    </section>
+
+    <table id="drawnCards">
+        <tr>
+            <td width='25%' id="revealBoxOne">
+                <div id='one' name='spot-one' class='drawn noDisplay'></div>
+            </td>
+            <td width='25%' id="revealBoxTwo">
+                <div id='two' name='spot-two' class='drawn noDisplay'></div>
+            </td>
+            <td width='25%' id="revealBoxThree">
+                <div id='three' name='spot-three' class='drawn noDisplay'></div>
+            </td>
+        </tr>
+    </table>
+
+    <section id="inputOutput">
+        <div id="userInput">
+            <textarea type="text" rows="10" name="query" id="query" placeholder="Insira sua consulta aqui."></textarea>
+        </div>
+        <div id="response">
+            <p id="response-para"></p>
+        </div>
+        <div id="loadingReading" name="loadingReading">
+            <div class="spinner"></div>
+            <label for="loadingReading">Lendo as cartas...</label>
+        </div>
+    </section>
+
+    <button id="getReading">Obtenha minha leitura</button>
+    <button id="startOver" class="noDisplay">Recomeçar</button>
+
+    <footer>
+        <p>Made by Mago Interior</p>
+    </footer>
+
+    <script src='Tarot.js'></script>
+</body>
+
+</html>
